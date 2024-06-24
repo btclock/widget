@@ -1,0 +1,125 @@
+@import "@fontsource/oswald/latin-400";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/maps";
+
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+
+.btclock {
+    border: 1px solid darkgray;
+    background: #000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+.btclock * {
+    font-family: "Oswald", sans-serif;
+}
+
+.btclock>div {
+    padding: 5px;
+}
+
+.digit {
+    font-size: 4rem;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.splitText div:first-child::after {
+    display: block;
+    content: "";
+    margin-top: 0px;
+    border-bottom: 2px solid;
+    padding-top: 3px;
+    margin-bottom: 3px;
+}
+
+.digit,
+.splitText,
+.mediumText {
+    border: 2px solid gold;
+    border-radius: 8px;
+    min-width: 41.25px;
+    margin: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.digit {
+    font-size: 2.5rem;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+
+}
+
+.splitText {
+    font-size: 0.625rem;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+
+    text-align: center;
+}
+
+.mediumText {
+    font-size: 1.0rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 23px !important;
+    padding-bottom: 23px !important;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: black;
+    }
+
+    50% {
+        background-color: #fdf4dc;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 0 auto;
+
+    .btclock {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .animate {
+        animation: backgroundAnimation 1s 1;
+    }
+}
+
+.close-button {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    background: transparent;
+    border: none;
+
+    *:hover {
+        color: #fff;
+    }
+}
